@@ -1,0 +1,741 @@
+* {
+    /* outline: 1px solid green !important; */
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    width: 100%;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b231f;
+}
+
+.logo{
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+
+    order: 1;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    order: 2;
+
+}
+
+.navbar>a{
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid #ffffff93;
+}
+
+
+#toggler, .navbar label{
+    display: none;
+}
+
+.navbar label>img{
+    width: 35px;
+    padding: 5px;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+
+.header_btn{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 120px;
+    height: 45px;
+    order: 3;
+}
+
+.header_btn a{
+    height: 40px;
+}
+
+.cart_btn, .account_btn{
+    height: 45px;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+#cart_img, #account_img{
+    width: 35px;
+}
+
+.list{
+    width: 100%;
+    padding: 0 25%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-wrap: nowrap;
+
+    background-color: #2b231f;
+
+}
+
+.list>li{
+}
+
+.list li a{
+    font-size: 20px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cart_btn{
+    box-shadow: none;
+}
+
+.account_btn{
+    box-shadow: none;
+}
+
+/* main */
+
+main{
+}
+
+/* filter_btn */
+
+.filter_btn_block{
+    height: 35px;
+    padding: 60px 80px;
+    margin: 0 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filt_btn{
+    padding: 0 20px;
+    height: 40px;
+    border: 1px solid #382d27;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-size: 24px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2b231f;
+    box-shadow: none;
+}
+
+.filt_btn:hover{
+    background-color: #382d27;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.filt_btn.active {
+    background-color: #382d27;
+    color: #ffffff;
+}
+
+section {
+    display: none;
+}
+
+/* Общие стили для section чтобы они были видны когда фильтр не активен */
+section.show {
+  display: block;
+}
+
+/* season_drinks */
+
+.season_drinks{
+    padding: 0px 90px 100px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.season_drinks h2{
+    width: 100%;
+    font-size: 50px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: i;
+    color: #2b231f;
+    text-align: center;
+}
+
+.card_bl{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* coffe_card */
+
+.coffe_card{
+    padding: 0px 90px 100px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.coffe_card h2{
+    width: 100%;
+    font-size: 50px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: i;
+    color: #2b231f;
+    text-align: center;
+}
+
+/* food*/
+
+.food{
+    padding: 0px 90px 100px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.food h2{
+    width: 100%;
+    font-size: 50px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: i;
+    color: #2b231f;
+    text-align: center;
+}
+
+/* bakery */
+
+.bakery{
+    padding: 0px 90px 100px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.bakery h2{
+    width: 100%;
+    font-size: 50px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: i;
+    color: #2b231f;
+    text-align: center;
+}
+
+
+/* card */
+
+.card{
+    width: 350px;
+    height: 490px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px 3px rgb(214, 210, 210);
+}
+
+.card_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h3{
+    margin: 25px 0 10px 0;
+    font-size: 25px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2b231f;
+    text-align: center;
+}
+
+.card_btn_bl{
+    width: 80%;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_price{
+    font-size: 30px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2b231f;
+}
+
+.card_btn{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #382d27;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-size: 25px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2b231f;
+}
+
+.card_btn:hover{
+    background-color: #382d27;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+
+/* popup */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 80px auto;
+    padding: 70px 35px 20px 35px;
+    background: #F4F3F2;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2b231f;
+}
+
+.popup p{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2b231f;
+    text-align: center;
+}
+
+.popup_btn_block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.popup_btn_block label,
+.popup_btn_block input {
+    width: 180px;
+    height: 40px;
+    border: 1px solid #382d27;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    font-size: 26px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #2b231f;
+    text-align: center;
+}
+
+.popup_btn_block input[type="radio"] {
+    display: none;
+}
+  
+.popup_btn_block label:hover {
+    background-color: #DDD;
+    transition: background-color 0.2s;
+}
+  
+.popup_btn_block input[type="radio"]:checked + label {
+    background-color: #2b231f;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.popup_buy_a{
+    margin-top: 40px;
+}
+
+.popup_buy_btn{
+    width: 400px;
+    height: 55px;
+    border: 1px solid #2b231f;
+    background-color: #2b231f;
+    cursor: pointer;
+
+    font-size: 35px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #ffffff;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 100px 60px 100px;
+    background-color: #2b231f;
+}
+
+.footer_logo{
+    width: 100%;
+    gap: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.footer_info{
+    display: flex;
+}
+
+.footer_menu{
+    margin-right: 50px;
+}
+
+.footer_list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer_list li a{
+    font-size: 20px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer_list li a:hover{
+    border-bottom: 1px solid #ffffff93;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts h4{
+    font-size: 20px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none; 
+    margin-bottom: 15px;
+}
+
+.phone_number{
+    font-size: 25px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.mail{
+    font-size: 25px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer_social_apps{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social p{
+    font-size: 20px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.social_btn{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tg, .vk{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.445);
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_btn_img{
+    width: 28px;
+}
+
+.apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apps p{
+    font-size: 20px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.apps_btn{
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.apps_btn a{
+    text-decoration: none;
+}
+
+.google_play{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 120px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: none;
+
+    font-size: 16px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.app_store{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 120px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: none;
+
+    font-size: 16px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.google_play:hover, .app_store:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+    transition: background-color 0.5s;
+}
+
+/* notification */
+
+#notification_bl {
+    width: 100%;
+    position: fixed; /* Фиксированное позиционирование */
+    top: 20px;        /* Отступ от верха экрана */
+    right: 20px;      /* Отступ от правого края экрана */
+    display: flex;
+    flex-direction: column; /* Уведомления одно под другим */
+    align-items: center; /* Выравниваем по правому краю */
+    z-index: 1000;     /* Высокий z-index, чтобы уведомления были поверх всего */
+    pointer-events: none; /* Позволяет кликать сквозь контейнер, если нужно */
+  }
+  
+  /* Стили для каждого уведомления (toast) */
+  .notification {
+    position: relative; /* Для позиционирования прогресс-бара */
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Белый фон */
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px 3px rgba(109, 107, 107, 0.452); /* Тень */
+    padding: 10px 20px;
+    margin-bottom: 20px;  /* Отступ между уведомлениями */
+    overflow: hidden;     /* Задайте ширину по вашему вкусу */
+    pointer-events: auto; ;/* Позволяет кликать по элементам внутри уведомления */
+  }
+
+  .notification.active {
+    transform: translateX(0%);
+    width: 400px;   
+    height: 50px;   
+  }
+  
+  .notification .notification_content {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .notification_content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  
+  .message .text {
+    font-size: 22px;
+    font-family: "Ysabeau Infant", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2b231f;
+    text-decoration: none;
+  }
+  
+  .notification .close_notification {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+  }
+
+  .notification .close_notification>img{
+    width: 15px;
+    height: 15px;
+  }
+  
+  .notification .close_notification:hover {
+    opacity: 0.5;
+  }
+  
+  .notification .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #2b231f
+
+  }
+  

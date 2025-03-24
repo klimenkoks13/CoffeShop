@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="registration.css">
+    <link href="media_screen_registration.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+    </style>
+    <title>CoffeShop</title>
+</head>
+
+<body>
+    <div class="autoriz_bl">
+
+        <a href="./autorization.html" class="back_btn" type="button">
+            <img src="./src/icons8-стрелка-назад-50.png" alt="">
+        </a>
+
+        <h1>Регистрация</h1>
+
+        <form class="reg_form_bl" id="reg_form">
+            <div class="reg_form_group">
+                <label for="reg_login">Логин</label>
+                <input type="text" id="reg_login" name="reg_login" placeholder="Введите логин" required>
+            </div>
+
+            <div class="reg_form_group">
+                <label for="reg_password">Пароль</label>
+                <input type="password" id="reg_password" name="reg_password" placeholder="Введите пароль" required>
+            </div>
+
+            <button type="submit" class="reg_login_btn">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reg_form = document.getElementById('reg_form');
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            let next_id = localStorage.getItem('next_id') ? parseInt(localStorage.getItem('next_id')) : (users.length > 0 ? Math.max(...users.map(user => user.id)) + 1 : 1);
+
+            function saveUsers(){
+                localStorage.setItem('users', JSON.stringify(users));
+            }
+
+            function saveNextId() {
+                localStorage.setItem('next_id', next_id.toString());
+            }
+
+            reg_form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const reg_login = document.getElementById('reg_login').value;
+                const reg_password = document.getElementById('reg_password').value;
+
+                if (users.find(user => user.login === reg_login)) {
+                    alert('Пользователь с таким логином уже существует!');
+                    return;
+                }
+
+                const newUser = {
+                    id: next_id,
+                    login: reg_login,
+                    password: reg_password,
+                    cup_count: 0
+                };
+
+                users.push(newUser);
+                saveUsers();
+
+                alert('Регистрация прошла успешно!');
+
+                next_id++;
+                saveNextId();
+                window.location.href = "autorization.html";
+            });
+        });
+    </script>
+</body>
+</html>

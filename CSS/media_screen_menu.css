@@ -1,0 +1,761 @@
+@media screen and (max-width: 1850px) {
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        margin: 0 350px;
+    }
+
+    /* season_drinks */
+    
+    .season_drinks h2{
+        font-size:45px;
+    }
+
+    /* coffe_card */
+    
+    .coffe_card h2{
+        font-size:45px;
+    }
+
+    /* food */
+    
+    .food h2{
+        font-size:45px;
+    }
+
+    /* bakery */
+    
+    .bakery h2{
+        font-size:45px;
+    }
+
+    /* card */
+    
+    .card{
+        width: 300px;
+        height: 420px;
+    }
+    
+    .card h3{
+        margin: 15px 0 10px 0;
+        font-size: 22px;
+    }
+
+    .card_price{
+        font-size: 28px;
+    }
+    
+    .card_btn{
+        width: 130px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    /* popup */
+
+    .popup {
+        margin: 50px auto;
+    }
+
+}
+
+@media screen and (max-width: 1680px) {
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        padding: 60px 20px;
+        margin: 0 300px;
+    }
+
+    /* season_drinks */
+
+    .season_drinks{
+        padding: 0px 105px 100px 105px;
+    }
+    
+    .season_drinks h2{
+        font-size:40px;
+    }
+
+    /* coffe_card */
+
+    .coffe_card{
+        padding: 0px 105px 100px 105px;
+    }
+    
+    .coffe-card h2{
+        font-size:40px;
+    }
+
+    /* food */
+
+    .food{
+        padding: 0px 105px 100px 105px;
+    }
+    
+    .food h2{
+        font-size:40px;
+    }
+
+    /* bakery */
+
+    .bakery{
+        padding: 0px 105px 100px 105px;
+    }
+    
+    .bakery h2{
+        font-size:40px;
+    }
+
+    /* card */
+    
+    .card{
+        width: 250px;
+        height: 350px;
+    }
+    
+    .card h3{
+        margin: 15px 0 10px 0;
+        font-size: 17px;
+    }
+
+    .card_price{
+        font-size: 23px;
+    }
+    
+    .card_btn{
+        width: 100px;
+        height: 30px;
+        font-size: 17px;
+    }
+
+    /* popup */
+
+    .popup {
+        margin: 50px auto;
+        width: 500px;
+        height: 500px;
+        padding: 40px 35px 20px 35px;
+    }
+
+    .popup_buy_a{
+        margin-top: 40px;
+    }
+
+    .popup p{
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .popup_btn_block label,
+    .popup_btn_block input {
+        width: 150px;
+        height: 35px;
+        font-size: 21px;
+    }
+    
+    .popup_btn_block{
+        margin-bottom: 0px;
+    }
+
+    .popup_buy_btn{
+        width: 350px;
+        height: 45px;
+        font-size: 30px;
+    }
+
+    
+}
+
+@media screen and (max-width: 1440px) {
+
+    /* header */
+
+    header{
+        height: 45px;
+    }
+
+    .list{
+        padding: 0 20%;
+    
+    }
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        padding: 60px 20px;
+        margin: 0 200px;
+    }
+
+    /* season_drinks */
+
+    .season_drinks{
+        padding: 0px 70px 100px 70px;
+    }
+
+    /* coffe_card */
+
+    .coffe_card{
+        padding: 0px 70px 100px 70px;
+    }
+
+    /* food */
+
+    .food{
+        padding: 0px 70px 100px 70px;
+    }
+
+    /* bakery */
+
+    .bakery{
+        padding: 0px 70px 100px 70px;
+    }
+
+    /* card */
+    
+    .card_bl{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* popup */
+
+    .popup {
+        margin: 30px auto;
+        width: 500px;
+        height: 500px;
+        padding: 40px 35px 20px 35px;
+    }
+
+    .popup_buy_a{
+        margin-top: 40px;
+    }
+
+    .popup p{
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .popup_btn_block label,
+    .popup_btn_block input {
+        width: 150px;
+        height: 35px;
+        font-size: 21px;
+    }
+    
+    .popup_btn_block{
+        margin-bottom: 0px;
+    }
+
+    .popup_buy_btn{
+        width: 350px;
+        height: 45px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        padding: 60px 0px;
+        margin: 0 170px;
+    }
+
+    .filt_btn{
+        font-size: 22px;
+    }
+
+    /* season_drinks */
+
+    .season_drinks{
+        padding: 0px 50px 80px 50px;
+    }
+
+    .season_drinks h2{
+        font-size: 35px;
+    }
+
+    /* coffe_card */
+
+    .coffe_card{
+        padding: 0px 50px 80px 50px;
+    }
+
+    .coffe_card h2{
+        font-size: 35px;
+    }
+
+    /* food */
+
+    .food{
+        padding: 0px 50px 80px 50px;
+    }
+
+    .food h2{
+        font-size: 35px;
+    }
+
+    /* food */
+
+    .bakery{
+        padding: 0px 50px 80px 50px;
+    }
+
+    .bakery h2{
+        font-size: 35px;
+    }
+
+    /* card */
+    
+    .card_bl{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card{
+        width: 230px;
+        height: 330px;
+    }
+    
+    .card h3{
+        margin: 15px 0 10px 0;
+        font-size: 17px;
+    }
+    
+    .card_price{
+        font-size: 23px;
+    }
+    
+    .card_btn{
+        width: 100px;
+        height: 30px;
+        font-size: 17px;
+    }
+
+    /* popup */
+
+    .popup {
+        margin: 30px auto;
+        width: 500px;
+        height: 500px;
+        padding: 40px 35px 20px 35px;
+    }
+
+    .popup_buy_a{
+        margin-top: 40px;
+    }
+
+    .popup p{
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .popup_btn_block label,
+    .popup_btn_block input {
+        width: 150px;
+        height: 35px;
+        font-size: 21px;
+    }
+    
+    .popup_btn_block{
+        margin-bottom: 0px;
+    }
+
+    .popup_buy_btn{
+        width: 350px;
+        height: 45px;
+        font-size: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    /* header */
+
+    header{
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .logo{
+        order: 2;
+    }
+    
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .list{
+        height: 100vh;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-wrap: nowrap;
+        gap: 25px;
+
+        background-color: #382d27a1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(25px);
+    }
+
+    .list li a{
+        font-size: 18px;
+    }
+
+    #toggler{
+        display: none;
+    }
+
+    .navbar{
+        width: 200px;
+        justify-content: start;
+        order: 1;
+    }
+
+    .header_btn{
+        order: 3;
+        width: 200px;
+        justify-content: end;
+    }
+
+    .header_btn a{
+        margin-right: 10px;
+    }
+
+    .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked ~ .menu{
+        max-height: 100vh;
+        transform: translateX(0);
+    }
+
+    #toggler:not(:checked) ~ .menu{
+        max-height: 100vh;
+        transform: translateX(-100);
+    }
+
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        height: max-content;
+        padding: 40px 0px;
+        margin: 0 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .filt_btn{
+        padding: 0 10px;
+        margin: 10px 20px;
+        height: 40px;
+        width: 250px;
+        font-size: 22px;
+    }
+
+    /* season_drinks */
+
+    .season_drinks{
+        padding: 0px 160px 30px 160px;
+    }
+
+    .season_drinks h2{
+        font-size: 35px;
+    }
+
+    /* coffe_card */
+
+    .coffe_card{
+        padding: 0px 160px 30px 160px;
+    }
+
+    .coffe_card h2{
+        font-size: 35px;
+    }
+
+    /* food */
+
+    .food{
+        padding: 0px 160px 30px 160px;
+    }
+
+    .food h2{
+        font-size: 35px;
+    }
+
+    /* bakery */
+
+    .bakery{
+        padding: 0px 160px 30px 160px;
+    }
+
+    .bakery h2{
+        font-size: 35px;
+    }
+
+    /* card */
+
+    .card_bl{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+    .card{
+        width: 260px;
+        height: 360px;
+        margin-bottom: 50px;
+    }
+    
+    .card h3{
+        margin: 15px 0 10px 0;
+        font-size: 17px;
+    }
+
+    .card_price{
+        font-size: 23px;
+    }
+    
+    .card_btn{
+        width: 100px;
+        height: 30px;
+        font-size: 17px;
+    }
+
+
+    /* footer */
+
+    footer{
+        justify-content: space-between;
+    }
+
+    .footer_info{
+        justify-content: center;
+        align-items: start;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .contacts{
+        align-items: start;
+        margin-top: 40px;
+    }
+
+    .footer_social_apps{
+        width: 50%;
+    }
+
+    .footer_logo{
+        font-size: 25px;
+    }
+
+    .footer_list li a{
+        font-size: 15px;
+    }
+
+    .contacts h4{
+        font-size: 15px;
+    }
+
+    .phone_number{
+        font-size: 20px;
+    }
+    
+    .mail{
+        font-size: 20px;
+    }
+
+    .social p{
+        font-size: 15px;
+    }
+
+    .apps p{
+        font-size: 15px;
+    }
+
+    /* popup */
+
+    .popup {
+        margin: 30px auto;
+        width: 400px;
+        height: 430px;
+        padding: 40px 35px 20px 35px;
+    }
+
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    .popup_buy_a{
+        margin-top: 40px;
+    }
+
+    .popup p{
+        margin-bottom: 15px;
+        font-size: 26px;
+    }
+
+    .popup_btn_block label,
+    .popup_btn_block input {
+        width: 120px;
+        height: 30px;
+        font-size: 17px;
+    }
+    
+    .popup_btn_block{
+        margin-bottom: 0px;
+    }
+
+    .popup_buy_btn{
+        width: 300px;
+        height: 40px;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    /* filter_btn */
+
+    .filter_btn_block{
+        padding: 40px 0px;
+        margin: 0 100px;
+    }
+
+    .filt_btn{
+        padding: 0 10px;
+        margin: 10px 20px;
+    }
+
+    /* season_drinks */
+
+    .season_drinks{
+        padding: 0px 90px 30px 90px;
+    }
+
+    .season_drinks h2{
+        font-size: 30px;
+    }
+
+    /* coffe_card */
+
+    .coffe_card{
+        padding: 0px 90px 30px 90px;
+    }
+
+    .coffe_card h2{
+        font-size: 30px;
+    }
+
+    /* food */
+
+    .food{
+        padding: 0px 90px 30px 90px;
+    }
+
+    .food h2{
+        font-size: 30px;
+    }
+
+    /* bakery */
+
+    .bakery{
+        padding: 0px 90px 30px 90px;
+    }
+
+    .bakery h2{
+        font-size: 30px;
+    }
+
+    /* card */
+    
+    .card_bl{
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card{
+        width: 240px;
+        height: 330px;
+        margin-bottom: 50px;
+    }
+    
+    .card h3{
+        margin: 15px 0 10px 0;
+        font-size: 17px;
+    }
+
+    .card_price{
+        font-size: 23px;
+    }
+    
+    .card_btn{
+        width: 100px;
+        height: 30px;
+        font-size: 17px;
+    }
+
+
+    /* footer */
+
+    footer{
+        justify-content: space-between;
+    }
+
+    .footer_info{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footer_menu{
+        margin-right: 0px;
+    }
+    
+    .footer_list{
+        align-items: center;
+    }
+
+    .contacts{
+        align-items: center;
+        margin: 40px 0;
+    }
+    
+    .footer_social_apps{
+        width: 100%;
+        align-items: center;
+    }
+}
