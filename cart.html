@@ -22,7 +22,7 @@
         <div class="cart_bl_autoriz" id="cart_bl_autoriz">
             <div class="cart_items_bl">
                 <div id="cart_items" class="cart_items">
-                    <!-- Элементы корзины будут добавлены сюда динамически -->
+                    
                 </div>
         
                 <div id="cart_total" class="cart_total">
@@ -43,8 +43,7 @@
     </div>
 
     <script>
-        // Пример данных (замените на данные, полученные от backend-а или localStorage)
-        const cart = JSON.parse(localStorage.getItem('cart') || '[]') ; // Получаем корзину из localStorage или создаем пустой массив
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]') ; 
         const order_btn = document.getElementById('order_btn');
         const warning = document.getElementById('warning');
 
@@ -70,14 +69,13 @@
             showWarning();
         }
 
-        // Функция для отображения элементов корзины
         function displayCart() {
         const cartItemsContainer = document.getElementById('cart_items');
         const totalPriceSpan = document.getElementById('total_price');
         const checkoutButton = document.getElementById('order_btn');
 
         let totalPrice = 0;
-        cartItemsContainer.innerHTML = ''; // Очищаем контейнер
+        cartItemsContainer.innerHTML = ''; 
 
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = '<p>Нет добавленных товаров</p>';
@@ -89,10 +87,9 @@
             const cartItemDiv = document.createElement('div');
             cartItemDiv.classList.add('cart_item');
 
-            // Добавляем изображение товара
             const img = document.createElement('img');
             img.src = item.image;
-            img.alt = item.name; // Используем имя как альтернативный текст
+            img.alt = item.name;
             cartItemDiv.appendChild(img);
 
             let options = '';
@@ -106,11 +103,10 @@
             <span>${item.price} руб.</span>
             `;
 
-            // Создаем кнопку удаления
             const removeButton = document.createElement('button');
             removeButton.classList.add('remove_btn');
             removeButton.textContent = 'Удалить';
-            removeButton.addEventListener('click', () => removeItem(index)); // Добавляем обработчик
+            removeButton.addEventListener('click', () => removeItem(index)); 
 
             cartItemDiv.appendChild(removeButton);
             totalPrice += item.price;
@@ -118,43 +114,33 @@
         });
 
         totalPriceSpan.textContent = totalPrice;
-        // Функция для удаления элемента из корзины
         function removeItem(index) {
-        cart.splice(index, 1); // Удаляем элемент из массива
-        localStorage.setItem('cart', JSON.stringify(cart)); // Обновляем localStorage
-        displayCart(); // Перерисовываем корзину
+        cart.splice(index, 1); 
+        localStorage.setItem('cart', JSON.stringify(cart)); 
+        displayCart(); 
         }
 
-        // Обработчик события для кнопки "Оформить заказ" (замените на реальную отправку данных на сервер)
         document.getElementById('order_btn').addEventListener('click', function() {
-            // Отправляем данные корзины на сервер
-            // TODO: Реализовать отправку данных на сервер с использованием fetch() или XMLHttpRequest
             alert('Оформление заказа...');
             const user_id = sessionStorage.getItem('user_id');
             let users = JSON.parse(localStorage.getItem('users')) || [];
 
-            // Находим индекс пользователя
             const userIndex = users.findIndex(user => user.id === parseInt(user_id));
 
 
             if (userIndex !== -1) {
-                // Увеличиваем cup_count
                 if(users[userIndex].cup_count < 7)
                 {
                     users[userIndex].cup_count++;
                 }
                 sessionStorage.setItem('cup_count', users[userIndex].cup_count);
-                // Сохраняем обновленный массив пользователей в localStorage
                 localStorage.setItem('users', JSON.stringify(users));
-
-            // Очищаем корзину после оформления заказа
             }
 
             localStorage.removeItem('cart');
             location.reload();
         });
     }
-        // При загрузке страницы отображаем корзину
     displayCart();
     </script>
 </body>
