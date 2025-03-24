@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <link href="media_screen_map.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+    </style>
+    <title>CoffeShop</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">CoffeShop</a>
+
+        <nav class="navbar">
+            <input type="checkbox" id="toggler">
+            <label for="toggler">
+                <img src="./src/icons8-menu.svg" alt="">
+            </label>
+            <div class="menu">
+                <ul class="list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="map.html">Карта кофеен</a></li>
+                    <li><a href="card.html">Карта лояльности</a></li>
+                    <li><a href="about_us.html">О нас</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <script>
+            document.addEventListener('scroll', function() {
+              const toggler = document.getElementById('toggler');
+          
+              if (toggler.checked) {
+                toggler.checked = false;
+              }
+            });
+        </script>
+
+        <div class="header_btn">
+            <a href="cart.html">
+                <button class="cart_btn">
+                    <img id="cart_img" src="./src/icons8-cart-64.png" alt="">
+                </button>
+            </a>
+            <a href="autorization.html">
+                <button class="account_btn">
+                    <img id="account_img" src="./src/icons8-account-96.png" alt="">
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A43f7cf4c0e5b95921e278aba8be248d7b5724e6a26ce67369ccbf40a2e575bea&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </main>
+
+    <footer>
+        <a href="index.html" class="footer_logo">CoffeShop</a>
+
+        <div class="footer_info">
+            <div class="footer_menu">
+                <ul class="footer_list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="menu.html">Меню</a></li>
+                    <li><a href="">Карта кофеен</a></li>
+                    <li><a href="">Карта лояльности</a></li>
+                    <li><a href="">О нас</a></li>
+                </ul>
+            </div>
+
+            <div class="contacts">
+                <h4>Контакты</h4>
+                <a href="tel:+79154819796" class="phone_number">7 915 481 97 96</a>
+                <a href="mailto:coffeshop@mail.ru" class="mail">coffeshop@mail.ru</a>
+            </div>
+        </div>
+
+        <div class="footer_social_apps">
+            <div class="social">
+                <p>Мы в соцсетях</p>
+                <div class="social_btn">
+                    <a href="">
+                        <button class="tg"><img class="social_btn_img" src="./src/icons8-tg-96.png" alt="tg"></button>
+                    </a>
+                    <a href="">
+                        <button class="vk"><img class="social_btn_img" src="./src/icons8-вконтакте-96.png" alt="vk"></button>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="apps">
+                <p>Наше мобильное приложение</p>
+                <div class="apps_btn">
+                    <a href="">
+                        <button class="google_play">
+                            <img class="social_btn_img" src="./src/icons8-google-play-100.png" alt="google_icon">
+                            Google Play
+                        </button>
+                    </a>
+                    <a href="">
+                        <button class="app_store">
+                            <img class="social_btn_img" src="./src//icons8-ос-mac-100.png" alt="apple_icon">
+                            Apple Store
+                        </button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cart.css">
+    <link href="media_screen_cart.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap');
+    </style>
+    <title>CoffeShop</title>
+</head>
+
+<body>
+    <div class="cart_bl">
+        <a href="./menu.html" class="back_btn" type="button">
+            <img src="./src/icons8-стрелка-назад-50.png" alt="">
+        </a>
+
+        <h1>Корзина</h1>
+        
+        <div class="cart_bl_autoriz" id="cart_bl_autoriz">
+            <div class="cart_items_bl">
+                <div id="cart_items" class="cart_items">
+                    <!-- Элементы корзины будут добавлены сюда динамически -->
+                </div>
+        
+                <div id="cart_total" class="cart_total">
+                    Общая сумма: <span id="total_price">0</span> руб.
+                </div>
+            </div>
+    
+            <div class="cart_items_btn_bl">
+                <button id="order_btn" class="order_btn">Оформить заказ</button>
+    
+                <h2 class="warning" id="warning">Для оформление заказа необходимо войти в аккаунт</h2>
+            </div>
+        </div>
+
+        <!-- <div class="cart_bl_not_autoriz" id="cart_bl_not_autoriz">
+        
+        </div> -->
+    </div>
+
+    <script>
+        // Пример данных (замените на данные, полученные от backend-а или localStorage)
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]') ; // Получаем корзину из localStorage или создаем пустой массив
+        const order_btn = document.getElementById('order_btn');
+        const warning = document.getElementById('warning');
+
+        function showOrderButton() {
+            order_btn.style.display = 'block';
+            warning.style.display = 'none';
+        }
+
+        function showWarning() {
+            order_btn.style.display = 'none';
+            warning.style.display = 'block';
+        }
+
+        const user_id = sessionStorage.getItem('user_id');
+         console.log("userId from sessionStorage:", user_id);
+
+        if (user_id) 
+        {
+            showOrderButton();
+        } 
+        else 
+        {
+            showWarning();
+        }
+
+        // Функция для отображения элементов корзины
+        function displayCart() {
+        const cartItemsContainer = document.getElementById('cart_items');
+        const totalPriceSpan = document.getElementById('total_price');
+        const checkoutButton = document.getElementById('order_btn');
+
+        let totalPrice = 0;
+        cartItemsContainer.innerHTML = ''; // Очищаем контейнер
+
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<p>Нет добавленных товаров</p>';
+            checkoutButton.classList.add('hidden');
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            const cartItemDiv = document.createElement('div');
+            cartItemDiv.classList.add('cart_item');
+
+            // Добавляем изображение товара
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.name; // Используем имя как альтернативный текст
+            cartItemDiv.appendChild(img);
+
+            let options = '';
+            if (item.type === 'drink') {
+            options = `<span>Молоко: ${item.milk} <br>Сироп: ${item.sirop} <br>Посыпка: ${item.sprinkling}</span>`;
+            }
+
+            cartItemDiv.innerHTML += `
+            <span>${item.name}</span>
+            ${options}
+            <span>${item.price} руб.</span>
+            `;
+
+            // Создаем кнопку удаления
+            const removeButton = document.createElement('button');
+            removeButton.classList.add('remove_btn');
+            removeButton.textContent = 'Удалить';
+            removeButton.addEventListener('click', () => removeItem(index)); // Добавляем обработчик
+
+            cartItemDiv.appendChild(removeButton);
+            totalPrice += item.price;
+            cartItemsContainer.appendChild(cartItemDiv);
+        });
+
+        totalPriceSpan.textContent = totalPrice;
+        // Функция для удаления элемента из корзины
+        function removeItem(index) {
+        cart.splice(index, 1); // Удаляем элемент из массива
+        localStorage.setItem('cart', JSON.stringify(cart)); // Обновляем localStorage
+        displayCart(); // Перерисовываем корзину
+        }
+
+        // Обработчик события для кнопки "Оформить заказ" (замените на реальную отправку данных на сервер)
+        document.getElementById('order_btn').addEventListener('click', function() {
+            // Отправляем данные корзины на сервер
+            // TODO: Реализовать отправку данных на сервер с использованием fetch() или XMLHttpRequest
+            alert('Оформление заказа...');
+            const user_id = sessionStorage.getItem('user_id');
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Находим индекс пользователя
+            const userIndex = users.findIndex(user => user.id === parseInt(user_id));
+
+
+            if (userIndex !== -1) {
+                // Увеличиваем cup_count
+                if(users[userIndex].cup_count < 7)
+                {
+                    users[userIndex].cup_count++;
+                }
+                sessionStorage.setItem('cup_count', users[userIndex].cup_count);
+                // Сохраняем обновленный массив пользователей в localStorage
+                localStorage.setItem('users', JSON.stringify(users));
+
+            // Очищаем корзину после оформления заказа
+            }
+
+            localStorage.removeItem('cart');
+            location.reload();
+        });
+    }
+        // При загрузке страницы отображаем корзину
+    displayCart();
+    </script>
+</body>
+</html>
