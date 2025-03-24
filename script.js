@@ -118,7 +118,7 @@ function closePopup(popup) {
 
 function openPopup(popup) {
     resetPopupFields(popup);
-    popup.style.display = 'block'; /
+    popup.style.display = 'block';
 }
 
 function resetPopupFields(popup) {
