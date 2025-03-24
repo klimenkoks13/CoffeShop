@@ -94,7 +94,7 @@
                 account.style.display = 'flex';
 
                 user_name.textContent = user.login;
-                counter.textContent = user.cup_count; // Используем логин как имя пользователя
+                counter.textContent = user.cup_count;
             }
 
             function showLoginForm() {
@@ -106,9 +106,9 @@
             function updateCupIcons(cup_count) {
                 for (let i = 0; i < cup_images.length; i++) {
                     if (i < cup_count) {
-                        cup_images[i].classList.add('active'); // Добавляем класс "active"
+                        cup_images[i].classList.add('active');
                     } else {
-                        cup_images[i].classList.remove('active'); // Удаляем класс "active"
+                        cup_images[i].classList.remove('active'); 
                     }
                 }
                  if (cup_count == 7) {
@@ -153,8 +153,6 @@
                     sessionStorage.setItem('user_id', user.id);
                     sessionStorage.setItem('cup_count', user.cup_count);
                     showAccountPage(user);
-                    // Здесь можно добавить перенаправление на другую страницу
-                    // window.location.href = "welcome.html";
                 } else {
                     alert('Неверный логин или пароль.');
                 }
