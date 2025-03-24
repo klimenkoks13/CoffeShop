@@ -9,10 +9,9 @@ document.addEventListener('scroll', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filt_btn');
     const sections = document.querySelectorAll('section');
-    let currentFilter = null; //  Текущий активный фильтр
-    let activeButton = null; // Текущая активная кнопка
+    let currentFilter = null; 
+    let activeButton = null; 
 
-    // Показываем все секции по умолчанию
     sections.forEach(section => section.style.display = 'block');
 
     filterButtons.forEach(button => {
@@ -20,24 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const filter = this.dataset.filter;
 
             if (activeButton === this) {
-                // Если нажата та же кнопка, отменяем фильтр
-                this.classList.remove('active'); // Удаляем класс active с кнопки
+                this.classList.remove('active'); 
                 activeButton = null;
                 currentFilter = null;
-                sections.forEach(section => section.style.display = 'block'); // Показываем все
+                sections.forEach(section => section.style.display = 'block');
             } else {
-                // Сбрасываем активный класс со всех кнопок
                 filterButtons.forEach(btn => btn.classList.remove('active'));
 
-                // Устанавливаем класс 'active' для нажатой кнопки
                 this.classList.add('active');
                 activeButton = this;
                 currentFilter = filter;
 
-                // Сбрасываем отображение для всех секций
                 sections.forEach(section => section.style.display = 'none');
 
-                // Показываем только секции с соответствующим data-category
                 sections.forEach(section => {
                     if (section.dataset.category === filter) {
                         section.style.display = 'block';
@@ -53,8 +47,8 @@ function showNotification() {
     let notificationContainer = document.getElementById('notification_bl');
     const notification = document.createElement('div');
 
-    notification.classList.add('notification'); // Добавляем класс "toast"
-    notification.classList.add('active'); // Добавляем класс "active" для отображения
+    notification.classList.add('notification');
+    notification.classList.add('active'); 
     notification.innerHTML = `
         <div class="notification_content">
       
@@ -73,12 +67,12 @@ function showNotification() {
     const closeNotification = notification.querySelector('.close_notification');
 
     closeNotification.addEventListener('click', () => {
-        notification.remove(); // Удаляем уведомление из DOM
+        notification.remove(); 
     });
   
     setTimeout(() => {
-        notification.remove(); // Удаляем уведомление из DOM
-    }, 3000); // 3 секунды (можно изменить)
+        notification.remove(); 
+    }, 3000); 
   }
 
 function addToCart(item) {
@@ -88,20 +82,17 @@ function addToCart(item) {
     showNotification();
 }
 
-// *** Обработка КАРТОЧЕК С ПОПАПАМИ (напитки) ***
 document.querySelectorAll('.card .popup_buy_btn').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault();
 
-        // Находим ближайшую карточку
         const card = this.closest('.card');
 
         const name = card.querySelector('h3').textContent;
         const price = parseInt(card.querySelector('.card_price').textContent);
         const image = card.querySelector('.card_img').src;
 
-        // Получаем значения из попапа
-        const popup = this.closest('.overlay'); // Находим ближайший overlay
+        const popup = this.closest('.overlay'); 
         const milk = popup.querySelector('input[name="milk"]:checked')?.value || 'Не выбрано';
         const sirop = popup.querySelector('input[name="sirop"]:checked')?.value || 'Не выбрано';
         const sprinkling = popup.querySelector('input[name="sprinkling"]:checked')?.value || 'Не выбрано';
@@ -122,46 +113,40 @@ document.querySelectorAll('.card .popup_buy_btn').forEach(button => {
 });
 
 function closePopup(popup) {
-    popup.style.display = 'none'; // Скрываем попап
+    popup.style.display = 'none'; 
 }
 
 function openPopup(popup) {
     resetPopupFields(popup);
-    popup.style.display = 'block'; // Или любое другое нужное вам отображение
+    popup.style.display = 'block'; /
 }
 
 function resetPopupFields(popup) {
-    // Сбрасываем радиокнопки (снимаем выделение)
     const radioButtons = popup.querySelectorAll('input[type="radio"]');
     radioButtons.forEach(radio => {
         radio.checked = false;
     });
 
-    // Сбрасываем текстовые поля (очищаем значения)
     const textInputs = popup.querySelectorAll('input[type="text"], textarea');
     textInputs.forEach(input => {
         input.value = '';
     });
 
-    // Сбрасываем выпадающие списки (выбираем первый элемент)
     const selects = popup.querySelectorAll('select');
     selects.forEach(select => {
-        select.selectedIndex = 0; // Выбираем первый элемент
+        select.selectedIndex = 0; 
     });
 
-    //Сбрасываем чекбоксы
     const checkboxes = popup.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
     });
 }
 
-// *** Обработка КАРТОЧЕК БЕЗ ПОПАПОВ (еда) ***
 document.querySelectorAll('.card:not(:has(.overlay)) .card_btn').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault();
 
-        // Находим ближайшую карточку
         const card = this.closest('.card');
 
         const name = card.querySelector('h3').textContent;
